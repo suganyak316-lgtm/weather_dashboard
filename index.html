@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Loading Weather Data...</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            ☁️ Weather Dashboard
+        </div>
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name">
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Current Weather -->
+        <section class="current-weather">
+
+            <div class="weather-main">
+
+                <div id="weatherIcon" class="weather-icon">
+                    ☀️
+                </div>
+
+                <div>
+
+                    <h1 id="cityName">
+                        Loading...
+                    </h1>
+
+                    <h2 id="weatherText">
+                        Sunny
+                    </h2>
+
+                    <h3 id="temperature">
+                        --°C
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Weather Details -->
+        <section class="weather-details">
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    🌡️
+                </div>
+
+                <h3 id="tempCard">
+                    --°C
+                </h3>
+
+                <p>Temperature</p>
+
+            </div>
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    💨
+                </div>
+
+                <h3 id="windSpeed">
+                    -- km/h
+                </h3>
+
+                <p>Wind Speed</p>
+
+            </div>
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    💧
+                </div>
+
+                <h3 id="humidity">
+                    --%
+                </h3>
+
+                <p>Humidity</p>
+
+            </div>
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    🌧️
+                </div>
+
+                <h3 id="rainChance">
+                    --%
+                </h3>
+
+                <p>Rain Chance</p>
+
+            </div>
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    ☀️
+                </div>
+
+                <h3 id="uvIndex">
+                    --
+                </h3>
+
+                <p>UV Index</p>
+
+            </div>
+
+        </section>
+
+        <!-- Sunrise Sunset -->
+        <section class="sun-section">
+
+            <div class="sun-card">
+
+                <h3>🌅 Sunrise</h3>
+
+                <p id="sunrise">
+                    --
+                </p>
+
+            </div>
+
+            <div class="sun-card">
+
+                <h3>🌇 Sunset</h3>
+
+                <p id="sunset">
+                    --
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Temperature Chart -->
+        <section class="chart-section">
+
+            <h2>
+                24-Hour Temperature Forecast
+            </h2>
+
+            <canvas
+                id="tempChart"
+                width="1000"
+                height="350">
+            </canvas>
+
+        </section>
+
+        <!-- Forecast -->
+        <section class="forecast-section">
+
+            <h2>
+                7-Day Forecast
+            </h2>
+
+            <div
+                id="forecastContainer"
+                class="forecast-grid">
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
